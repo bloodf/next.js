@@ -78,6 +78,7 @@ module.exports = {
           content: `
             module.exports = {
               generateBuildId: () => 'BUILD_ID',
+              productionBrowserSourceMaps: true,
               webpack(config) {
                 config.optimization.minimize = false
                 config.optimization.minimizer = undefined
@@ -98,7 +99,8 @@ module.exports = {
           path: 'next.config.js',
           content: `
             module.exports = {
-              generateBuildId: () => 'BUILD_ID'
+              generateBuildId: () => 'BUILD_ID',
+              productionBrowserSourceMaps: true
             }
           `,
         },
